@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 15:11:31 by abakirca          #+#    #+#             */
-/*   Updated: 2025/02/13 17:47:46 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/02/13 18:10:31 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ Span::Span()
 
 Span::Span(unsigned int n)
 {
-	if (vec.size() == size)
-		throw SpanFull();
 	size = n;
 	filled = 0;
 }
@@ -47,7 +45,6 @@ Span::~Span()
 
 void Span::addNumber(int n)
 {
-	std::cout << n;
 	if (size == 0)
 		throw SpanEmpty();
 	if (filled >= size)
@@ -64,9 +61,9 @@ unsigned int Span::shortestSpan()
 		throw SpanNotEnoughValues();
 	std::vector<int> tmp = vec;
 	std::sort(tmp.begin(), tmp.end());
-	std::vector<int> diff(vec.size() - 1);
+	std::vector<int> diff(tmp.size());
 	std::adjacent_difference(tmp.begin(), tmp.end(), diff.begin());
-	return (*std::min_element(diff.begin(), diff.end()));
+	return (*std::min_element(diff.begin() + 1, diff.end()));
 }
 
 unsigned int Span::longestSpan()
