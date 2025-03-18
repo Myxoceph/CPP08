@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 13:54:43 by abakirca          #+#    #+#             */
-/*   Updated: 2025/02/13 14:24:17 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/03/18 14:48:40 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(void)
 	vec.push_back(45);
 	vec.push_back(94);
 	std::cout << BLUE"=============================================" << RESET << std::endl << std::endl;
-	std::cout << CYAN"Starting a int vector with these values	: "WHITE;
+	std::cout << CYAN"Starting an int vector with these values	: "WHITE;
 	for (std::vector<int>::iterator it = vec.begin(); it != vec.end(); it++)
 		std::cout << *it << " ";
 	std::cout << RESET << std::endl << std::endl;
