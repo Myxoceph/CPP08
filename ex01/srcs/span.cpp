@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 15:11:31 by abakirca          #+#    #+#             */
-/*   Updated: 2025/02/13 18:10:31 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/10/20 13:33:26 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,16 @@ void Span::addNumber(int n)
 	filled++;
 }
 
+void Span::addNumber(const int *arr, unsigned int arr_size)
+{
+	if (size == 0)
+		throw SpanEmpty();
+	if (filled + arr_size > size)
+		throw SpanFull();
+	vec.insert(vec.end(), arr, arr + arr_size);
+	filled += arr_size;
+}
+
 unsigned int Span::shortestSpan()
 {
 	if (size == 0)
@@ -79,6 +89,10 @@ unsigned int Span::longestSpan()
 
 void Span::RandomFill(Span &sp, unsigned int n)
 {
+	if (sp.size == 0)
+		throw SpanEmpty();
+	if (n > sp.size - sp.filled)
+		throw SpanFull();
 	srand(time(NULL));
 	for (unsigned int i = 0; i < n; i++)
 	{
@@ -88,12 +102,12 @@ void Span::RandomFill(Span &sp, unsigned int n)
 
 const char *Span::SpanEmpty::what() const throw()
 {
-	return ("Span is empty!");
+	return ("Vector is empty!");
 }
 
 const char *Span::SpanFull::what() const throw()
 {
-	return ("Span is full!");
+	return ("Vector is full!");
 }
 
 const char *Span::SpanNotEnoughValues::what() const throw()

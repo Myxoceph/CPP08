@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 15:11:42 by abakirca          #+#    #+#             */
-/*   Updated: 2025/02/13 17:44:45 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/10/20 13:07:56 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ class Span
 			Span &operator=(Span const &copy);
 			~Span();
 			void addNumber(int n);
+			void addNumber(const int *arr, unsigned int size);
 			unsigned int shortestSpan();
 			unsigned int longestSpan();
 			void RandomFill(Span &sp, unsigned int n);

@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 18:16:13 by abakirca          #+#    #+#             */
-/*   Updated: 2025/02/14 17:23:48 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/10/20 15:02:31 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ int main()
 		--it;
 		while (it != ite)
 		{
-		std::cout << *it << std::endl;
-		++it;
+			std::cout << *it << std::endl;
+			++it;
 		}
 		std::stack<int> s(mstack);
 	}
@@ -54,9 +54,9 @@ int main()
 		--it;
 		while (it != ite)
 		{
-		std::cout << *it << std::endl;
-		++it;
+			std::cout << *it << std::endl;
+			++it;
 		}
-		return 0;
 	}
+	return 0;
 }
