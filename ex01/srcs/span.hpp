@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 15:11:42 by abakirca          #+#    #+#             */
-/*   Updated: 2025/10/20 13:07:56 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/10/21 13:06:38 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ class Span
 			~Span();
 			void addNumber(int n);
 			void addNumber(const int *arr, unsigned int size);
+			void addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 			unsigned int shortestSpan();
 			unsigned int longestSpan();
 			void RandomFill(Span &sp, unsigned int n);

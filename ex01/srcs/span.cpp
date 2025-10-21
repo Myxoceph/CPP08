@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 15:11:31 by abakirca          #+#    #+#             */
-/*   Updated: 2025/10/20 13:33:26 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/10/21 13:06:48 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,17 @@ void Span::addNumber(const int *arr, unsigned int arr_size)
 	if (filled + arr_size > size)
 		throw SpanFull();
 	vec.insert(vec.end(), arr, arr + arr_size);
+	filled += arr_size;
+}
+
+void Span::addNumber(std::vector<int>::iterator begin, std::vector<int>::iterator end)
+{
+	unsigned int arr_size = std::distance(begin, end);
+	if (size == 0)
+		throw SpanEmpty();
+	if (filled + arr_size > size)
+		throw SpanFull();
+	vec.insert(vec.end(), begin, end);
 	filled += arr_size;
 }
 

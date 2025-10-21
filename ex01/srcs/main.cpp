@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 15:11:36 by abakirca          #+#    #+#             */
-/*   Updated: 2025/10/20 13:43:51 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/10/21 13:08:57 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int main(void)
 	{
 		std::cout << RED << "Exception : " << e.what() << std::endl << std::endl;
 	}
-	std::cout << BLUE"=============================================" << RESET << std::endl;
+	std::cout << BLUE"=============================================" << RESET << std::endl << std::endl;
 	std::cout << YELLOW"Starting a Vector test with subject values : "RESET << std::endl << std::endl;
 	Span sp6 = Span(10);
 	int arr[] = {6, 3, 17, 9, 11};
@@ -86,6 +86,19 @@ int main(void)
 	std::cout << BLUE"=============================================" << RESET << std::endl << std::endl;
 	std::cout << CYAN"Shortest span	: "WHITE << sp6.shortestSpan() << RESET << std::endl << std::endl;
 	std::cout << CYAN"Longest span	: "WHITE << sp6.longestSpan() << RESET << std::endl << std::endl;
+	std::cout << BLUE"=============================================" << RESET << std::endl << std::endl;
+	std::cout << YELLOW"Starting a Vector test with iterator values : "RESET << std::endl << std::endl;
+	Span sp7 = Span(10);
+	std::vector<int> vec;
+	vec.push_back(6);
+	vec.push_back(3);
+	vec.push_back(17);
+	vec.push_back(9);
+	vec.push_back(11);
+	sp7.addNumber(vec.begin(), vec.end());
+	std::cout << BLUE"=============================================" << RESET << std::endl << std::endl;
+	std::cout << CYAN"Shortest span	: "WHITE << sp7.shortestSpan() << RESET << std::endl << std::endl;
+	std::cout << CYAN"Longest span	: "WHITE << sp7.longestSpan() << RESET << std::endl << std::endl;
 	std::cout << BLUE"=============================================" << RESET << std::endl;
 	return (0);
 }
