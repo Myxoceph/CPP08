@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 18:16:02 by abakirca          #+#    #+#             */
-/*   Updated: 2025/10/20 14:29:09 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/10/21 12:26:11 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <vector>
 #include <stack>
 #include <algorithm>
+// #include <cxxabi.h>
+// #include <memory>
 
 #define GREEN "\033[1;32m"
 #define YELLOW "\033[1;33m"
@@ -37,6 +39,7 @@ class MutantStack : public std::stack<T>
 		typedef typename std::stack<T>::container_type::iterator iterator;
 		iterator begin();
 		iterator end();
+		// void print();
 };
 
 #include "MutantStack.tpp"

@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 18:16:13 by abakirca          #+#    #+#             */
-/*   Updated: 2025/10/20 15:02:31 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/10/21 12:40:50 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,21 +35,22 @@ int main()
 			++it;
 		}
 		std::stack<int> s(mstack);
+		// mstack.print();
 	}
 	std::cout << BLUE"======================================="RESET << std::endl;
 	{
-		std::deque<int> deq;
-		deq.push_back(5);
-		deq.push_back(17);
-		std::cout << deq.back() << std::endl;
-		deq.pop_back();
-		std::cout << deq.size() << std::endl;
-		deq.push_back(3);
-		deq.push_back(5);
-		deq.push_back(737);
-		deq.push_back(0);
-		std::deque<int>::iterator it = deq.begin();
-		std::deque<int>::iterator ite = deq.end();
+		std::vector<int> vec;
+		vec.push_back(5);
+		vec.push_back(17);
+		std::cout << vec.back() << std::endl;
+		vec.pop_back();
+		std::cout << vec.size() << std::endl;
+		vec.push_back(3);
+		vec.push_back(5);
+		vec.push_back(737);
+		vec.push_back(0);
+		std::vector<int>::iterator it = vec.begin();
+		std::vector<int>::iterator ite = vec.end();
 		++it;
 		--it;
 		while (it != ite)

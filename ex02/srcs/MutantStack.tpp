@@ -6,7 +6,7 @@
 /*   By: abakirca <abakirca@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/13 18:16:07 by abakirca          #+#    #+#             */
-/*   Updated: 2025/02/13 18:42:26 by abakirca         ###   ########.fr       */
+/*   Updated: 2025/10/21 12:46:21 by abakirca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 template <typename T>
 MutantStack<T>::MutantStack()
 {
-	std::stack<T, std::vector<int> >();
 }
 
 template <typename T>
@@ -51,3 +50,16 @@ typename MutantStack<T>::iterator MutantStack<T>::end()
 {
 	return this->c.end();
 }
+
+// template <typename T>
+// void MutantStack<T>::print()
+// {
+// 	int status;
+// 	char *realname = abi::__cxa_demangle(
+// 		typeid(typename std::stack<T>::container_type).name(),
+// 		0, 0, &status
+// 	);
+
+// 	std::cout << "Container type: " << (status == 0 ? realname : "Unknown") << std::endl;
+// 	std::free(realname);
+// }
